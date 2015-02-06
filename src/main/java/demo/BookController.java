@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BookController {
 	
-	private static final String template = "Hello, %s!";
-    
-    @RequestMapping("/book/{id}")
+	@RequestMapping("/book/{id}")
     public Book get(@PathVariable("id") int id) {
     	Book book = new Book();
     	book.Id = id;

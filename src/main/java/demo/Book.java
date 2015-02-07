@@ -1,6 +1,8 @@
 package demo;
 import org.springframework.data.annotation.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 public class Book {
 	@Id
@@ -10,7 +12,7 @@ public class Book {
 	private String author;
 	private String publisher;
 	
-	public Book(String id){
+	public Book(@JsonProperty("id") String id){
 		this.id = id;
 	}
 	
